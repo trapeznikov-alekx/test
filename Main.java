@@ -16,15 +16,20 @@ public class Main
         int menu = scan.nextInt();
         if (menu == 1) {
        } else if (menu == 2) }
-       
+
        } else if (menu == 3) }
-       
+
        } else if (menu == 4) }
-       
+
        } else if (menu == 5) }
-       System.out.print("Введите степень факториала:")
-{      int num = scan.nextInt();
-	 
-		
+            System.out.print("Введите степень факториала:")
+{           int num = scan.nextInt();
+            long res = Calculator.fact(num);
+            System.out.printf("%d! = %d", num, res);
+        } else if (menu == 6) {
+            System.out.print("Введите числа:");
+            
+        }
+
 	}
 }
