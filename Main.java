@@ -41,17 +41,52 @@ public class Main
             int n2 = scan.nextInt();
             int SS = Caiculator.div(n1, n2);
             System.out.printf("%d / %d = %d", n1, n2, SS);
-            catch (Exception error) {
+            } catch (Exception error) {
                 System.out.println(error.getMessage());
-       } else if (menu == 5) }
+            }
+            }
+        else if (menu == 5) }
             System.out.print("Введите степень факториала:")
 {           int num = scan.nextInt();
             long res = Calculator.fact(num);
-            System.out.printf("%d / %d = %d", n1, n2, SS);
-            
+            System.out.printf("%d! / %d = %d",num, res);
         } else if (menu == 6) {
             System.out.print("Введите числа:");
+            double num = scan.nextDouble();
+            double res = Calculator.sqrt(num);
+            System.out.printf("sqrt(%f) = %f", num, res);
+        } else if (menu == 7) {
+            System.out.print("Введите число:");
+            double num = scan.nextDouble();
+            System.out.print("Введите степень:");
+            int pow = scan.nextInt();
+            double res = Calculator.pow(num, pow);
+            System.out.printf("%f^%d = %f", num, pow, res);
+        } else {
+            System.out.println("Я не понял.");
+        }
+            public class Calculator {
+                public static long fact(long number) {
+                    long result = 1;
+                    for (long i = 1; i <= number; i++) {
+                        result = result * i;
+                        
+                    }
+                    return result; 
+                }
+            }
             
+            public static double sqrt(double number) {
+                return Math.sqrt(number);
+            }
+            
+            public static double pow(double number, int pow){
+                double result = 1;
+                for (int i = 1; i <= pow; i++) {
+                    result = result * number;
+                }
+            }
+            return result;
         }
 
 	}
